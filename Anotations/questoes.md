@@ -1,12 +1,12 @@
 ### Questão 2 - Converter números base 10 em romanos
 
 <b>1.  Verificar a casa decimal do número total:</b>
-    <b>2424</b>: 3 digitos após o primeiro número = MILHAR (1000)
+    <b>2424</b>: 
 
-    - Nenhum digito (UND) | <b>I - V - IX</b>
-    - 1 digito (DEZENA)   | <b>X</b>
-    - 2 digitos (CENTENA) | <b>C</b> 
-    - 3 digitos (MILHAR)  | <b>M</b>
+    - 1 digito (UNIDADE)  | <>b>I - V - IX</b>
+    - 2 digito (DEZENA)   | <b>X</b>
+    - 3 digitos (CENTENA) | <b>C</b> 
+    - 4 digitos (MILHAR)  | <b>M</b>
 
 <b>2.  Definir o símbolo geral com base na casa decimal:</b>
 

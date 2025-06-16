@@ -1,4 +1,4 @@
-### Testes Unitários com xUnit
+### Configurar | Testes Unitários com xUnit
 
 1. Terminal com a pasta do projeto aberto
 `cd MeuProjeto`
@@ -25,3 +25,30 @@
 
 Ao fim, com essa configuração será possível criar os testes.
 Basta `dotnet test`
+
+### Implementação | Testes Unitários com xUnit
+
+`[Fact]` &rarr; Para testes fixos e valores isolados. Usado quando o teste <b>não depende de parâmetros</b> - de entrada externa - ou que é ncessário testar um <b>cenário específico e único</b>.
+
+```
+[Fact]
+public void DeveRetornarIParaUm()
+{
+    var resultado = NumberToRoman.Converter(1);
+    Assert.Equal("I", resultado);
+}
+```
+
+`[Theory]` &rarr; Usado quando o teste precisa ser executado com vários valores diferentes.
+`[InlineData]` &rarr; Define os valores de entrada usados pela `[Theory]`.
+```
+[Theory]
+[InlineData(1, "I")]
+[InlineData(4, "IV")]
+[InlineData(9, "IX")]
+public void DeveConverterNumerosParaRomanos(int input, string esperado)
+{
+    var resultado = NumberToRoman.Converter(input);
+    Assert.Equal(esperado, resultado);
+}
+```

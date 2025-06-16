@@ -1,0 +1,15 @@
+/home/jaqueline/Área de Trabalho/Testes e Qualidade de Software/TesteRomain/ConvertRomain/bin/Debug/net8.0/ConvertRomain
+/home/jaqueline/Área de Trabalho/Testes e Qualidade de Software/TesteRomain/ConvertRomain/bin/Debug/net8.0/ConvertRomain.deps.json
+/home/jaqueline/Área de Trabalho/Testes e Qualidade de Software/TesteRomain/ConvertRomain/bin/Debug/net8.0/ConvertRomain.runtimeconfig.json
+/home/jaqueline/Área de Trabalho/Testes e Qualidade de Software/TesteRomain/ConvertRomain/bin/Debug/net8.0/ConvertRomain.dll
+/home/jaqueline/Área de Trabalho/Testes e Qualidade de Software/TesteRomain/ConvertRomain/bin/Debug/net8.0/ConvertRomain.pdb
+/home/jaqueline/Área de Trabalho/Testes e Qualidade de Software/TesteRomain/ConvertRomain/obj/Debug/net8.0/ConvertRomain.GeneratedMSBuildEditorConfig.editorconfig
+/home/jaqueline/Área de Trabalho/Testes e Qualidade de Software/TesteRomain/ConvertRomain/obj/Debug/net8.0/ConvertRomain.AssemblyInfoInputs.cache
+/home/jaqueline/Área de Trabalho/Testes e Qualidade de Software/TesteRomain/ConvertRomain/obj/Debug/net8.0/ConvertRomain.AssemblyInfo.cs
+/home/jaqueline/Área de Trabalho/Testes e Qualidade de Software/TesteRomain/ConvertRomain/obj/Debug/net8.0/ConvertRomain.csproj.CoreCompileInputs.cache
+/home/jaqueline/Área de Trabalho/Testes e Qualidade de Software/TesteRomain/ConvertRomain/obj/Debug/net8.0/ConvertRomain.sourcelink.json
+/home/jaqueline/Área de Trabalho/Testes e Qualidade de Software/TesteRomain/ConvertRomain/obj/Debug/net8.0/ConvertRomain.dll
+/home/jaqueline/Área de Trabalho/Testes e Qualidade de Software/TesteRomain/ConvertRomain/obj/Debug/net8.0/refint/ConvertRomain.dll
+/home/jaqueline/Área de Trabalho/Testes e Qualidade de Software/TesteRomain/ConvertRomain/obj/Debug/net8.0/ConvertRomain.pdb
+/home/jaqueline/Área de Trabalho/Testes e Qualidade de Software/TesteRomain/ConvertRomain/obj/Debug/net8.0/ConvertRomain.genruntimeconfig.cache
+/home/jaqueline/Área de Trabalho/Testes e Qualidade de Software/TesteRomain/ConvertRomain/obj/Debug/net8.0/ref/ConvertRomain.dll
