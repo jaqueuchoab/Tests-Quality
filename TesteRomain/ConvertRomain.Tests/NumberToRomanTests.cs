@@ -13,8 +13,7 @@ public class NumberToRomanTests
     [Fact]
 
     // Método de teste que verifica a conversão do número 1 para o numeral romano "I"
-    public void Convert1ToI()
-    {
+    public void Convert1ToI() {
         // Entrada do teste
         int input = 1; 
         // Resultado esperado da conversão
@@ -34,8 +33,7 @@ public class NumberToRomanTests
     [InlineData(2, "II")]
     [InlineData(3, "III")]
 
-    public void ConvertNumbersToRomain(int input, string expected)
-    {
+    public void ConvertNumbersToRomain(int input, string expected) {
         var result = NumberToRoman.Convert(input);
 
         Assert.Equal(expected, result);
@@ -59,8 +57,7 @@ public class NumberToRomanTests
     [InlineData(100, "Centena")]
     [InlineData(1000, "Milhar")]
 
-    public void VerifySortNumber(int input, string expected)
-    {
+    public void VerifySortNumber(int input, string expected) {
         // Cria uma instância da classe NumberToRoman
         var numberToRoman = new NumberToRoman(input);
         
@@ -69,5 +66,58 @@ public class NumberToRomanTests
 
         // Verifica se o resultado contém a string esperada, não precisa ser IGUAL apenas se contém
         Assert.Contains(expected, result);
+    }
+
+    // Teste para verificar a conversão de números com apenas uma unidade
+    [Theory]
+    [InlineData(1, "I")]
+    [InlineData(2, "II")]
+    [InlineData(3, "III")]
+    [InlineData(4, "IV")]
+    [InlineData(5, "V")]
+    [InlineData(6, "VI")]
+    [InlineData(7, "VII")]
+    [InlineData(8, "VIII")]
+    [InlineData(9, "IX")]
+
+    public void ConvertUnitRoman(int number, string expected) {
+        NumberToRoman numberToRoman = new NumberToRoman(number);
+
+        // Verificar se o número é uma unidade
+        numberToRoman.SortNumber(number);
+        var result = numberToRoman.GetNumberConverted();
+        Assert.Equal(expected, result);
+    }
+
+    [Theory]
+    // Casos base
+    [InlineData(10, "X")]
+    [InlineData(20, "XX")]
+    [InlineData(30, "XXX")]
+    [InlineData(40, "XL")]
+    [InlineData(50, "L")]
+    [InlineData(60, "LX")]
+    [InlineData(70, "LXX")]
+    [InlineData(80, "LXXX")]
+    [InlineData(90, "XC")]
+    // Casos que entram na primeira condição do método Dezena
+    [InlineData(11, "XI")]
+    [InlineData(14, "XIV")]
+    [InlineData(19, "XIX")]
+    [InlineData(21, "XXI")]
+    [InlineData(24, "XXIV")]
+    [InlineData(29, "XXIX")]
+    [InlineData(31, "XXXI")]
+    [InlineData(34, "XXXIV")]
+    [InlineData(39, "XXXIX")]
+
+
+    public void ConvertTensRoman(int number, string expected) {
+        NumberToRoman numberToRoman = new NumberToRoman(number);
+
+        // Verificar se o número é uma dezena
+        numberToRoman.SortNumber(number);
+        var result = numberToRoman.GetNumberConverted();
+        Assert.Equal(expected, result);
     }
 }
