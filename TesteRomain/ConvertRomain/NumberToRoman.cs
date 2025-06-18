@@ -51,6 +51,20 @@ public class NumberToRoman {
     }
   }
 
+  public string TensUnitMoreZero(int number) {
+    // Separando as unidades
+    int unidade = number % 10;
+    this.SortNumber(unidade);
+    string partUnity = this.numberConverted;
+
+    int dezena = number - unidade;
+    this.SortNumber(dezena);
+    string partDezena = this.numberConverted;
+    
+    // Concatenando as partes
+    return (partDezena + partUnity);
+  }
+
   public string Unidade(int number) {
     if (number >=1 && number <= 3) {
       string resultRoman = new string('I', number);
@@ -77,27 +91,24 @@ public class NumberToRoman {
       if(number % 10 == 0) {
         resultRoman = new string('X', number/10);
       } else  {
-        // Esse else aqui pode ser transformado em uma função pois essa lógica se aplica há outros casos
-        // Separando as unidades
-        int unidade = number % 10;
-        int dezena = number - unidade;
-
-        // Convertendo as partes
-        this.Unidade(unidade);
-        string partUnity = this.numberConverted;
-
-        this.Dezena(dezena);
-        string partDezena = this.numberConverted;
-
-        // Concatenando as partes
-        resultRoman = partDezena + partUnity;
+        // Só converte dezenas em que a unidade é diferente de zero
+        resultRoman = this.TensUnitMoreZero(number);
       }
       this.numberConverted = resultRoman;
-    } else if (number == 50) {
-      this.numberConverted = "L";
-    } else if (number >= 60 && number <= 80) {
-      resultRoman = "L" + new string('X', (number - 50)/10);
-      this.numberConverted = resultRoman;
+    } else if (number >= 50 && number <= 59) {
+        if(number % 10 == 0) {
+          resultRoman =  "L";
+        } else {
+          resultRoman = this.TensUnitMoreZero(number);
+        }
+        this.numberConverted = resultRoman;
+    } else if (number >= 60 && number <= 89) {
+        if(number % 10 == 0) {
+          resultRoman = "L" + new string('X', (number - 50)/10);
+        } else {
+          resultRoman = this.TensUnitMoreZero(number);
+        }
+        this.numberConverted = resultRoman;
     } else {
       number += 10;
       this.SortNumber(number);
@@ -109,8 +120,28 @@ public class NumberToRoman {
   }
 
   public string Centena(int number) {
-    if (number >= 100 && number <= 300) {
-      string resultRoman = new string('C', number/100);
+    string resultRoman = "";
+    if (number >= 100 && number <= 399) {
+      if(number % 100 == 0) {
+        resultRoman = new string('C', number/100);
+      } else {
+        resultRoman = this.TensUnitMoreZero(number);
+      }
+      this.numberConverted = resultRoman;
+    } else if (number >= 500 && number <= 599) {
+        if(number % 10 == 0) {
+          resultRoman = "D";
+        }
+        this.numberConverted = resultRoman;
+    } else if (number >= 600 && number <= 899) {
+        if(number % 10 == 0) {
+          resultRoman = "D" + new string('C', (number - 500)/100);
+        }
+        this.numberConverted = resultRoman;
+    } else {
+      number += 100;
+      this.SortNumber(number);
+      resultRoman = "C" + this.numberConverted;
       this.numberConverted = resultRoman;
     }
 
@@ -119,6 +150,7 @@ public class NumberToRoman {
   }
   
   public string Milhar(int number) {
+    this.numberConverted = new string('M', number/1000);
     this.decimalPlace = "M";
     return "Milhar: " + this.decimalPlace;
   }

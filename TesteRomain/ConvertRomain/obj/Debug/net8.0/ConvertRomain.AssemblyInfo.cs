@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConvertRomain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d585b566077e3d808e7297762a2c2328c78dc30")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+719de35e53a1b8f1cab254ae5fbfe24910590256")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConvertRomain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConvertRomain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

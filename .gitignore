@@ -1,4 +1,6 @@
-/TestRomain/ConvertRomain/bin/
-/TestRomain/ConvertRomain/obj/
-/TestRomain/ConvertRomain.Tests/bin/
-/TestRomain/ConvertRomain.Tests/obj/
+/TestRomain/ConvertRomain/bin/*
+/TestRomain/ConvertRomain/obj/*
+/TestRomain/ConvertRomain.Tests/bin/*
+/TestRomain/ConvertRomain.Tests/obj/*
+/TestRomain/ConvertRomain.sln.DotSettings.user
+/TestRomain/ConvertRomain.sln.DotSettings
