@@ -4,3 +4,17 @@
 /TestRomain/ConvertRomain.Tests/obj/*
 /TestRomain/ConvertRomain.sln.DotSettings.user
 /TestRomain/ConvertRomain.sln.DotSettings
+
+# Ignorar arquivos de build e cache do projeto principal
+/Calculator/CalculatorProj/bin/
+/Calculator/CalculatorProj/obj/
+
+# Ignorar arquivos de build e cache do projeto de testes
+/Calculator/CalculatorProj.Tests/bin/
+/Calculator/CalculatorProj.Tests/obj/
+
+# Ignorar arquivos específicos de cache do NuGet (caso deseje ser mais explícita)
+/Calculator/CalculatorProj/obj/*.nuget.*
+/Calculator/CalculatorProj.Tests/obj/*.nuget.*
+/Calculator/CalculatorProj/obj/project.*
+/Calculator/CalculatorProj.Tests/obj/project.*
