@@ -144,34 +144,95 @@ public class NumberToRomanTests
     [Theory]
     // Casos base
     [InlineData(100, "C")]
-    [InlineData(200, "CC")]
-    [InlineData(300, "CCC")]
     [InlineData(400, "CD")]
     [InlineData(500, "D")]
-    [InlineData(600, "DC")]
-    [InlineData(700, "DCC")]
-    [InlineData(800, "DCCC")]
     [InlineData(900, "CM")]
     // Casos que entram na primeira condição do método Centena
     [InlineData(101, "CI")]
-    [InlineData(104, "CIV")]
-    [InlineData(109, "CIX")]
+    [InlineData(204, "CCIV")]
+    [InlineData(309, "CCCIX")]
     // Casos que entram no else, ou seja, casos especiais que adicionam "C" antes do resultado
-    [InlineData(401, "CCI")]
-    [InlineData(404, "CCIV")]
-    [InlineData(409, "CCIX")]
+    [InlineData(401, "CDI")]
+    [InlineData(404, "CDIV")]
+    [InlineData(409, "CDIX")]
     [InlineData(901, "CMI")]
     [InlineData(904, "CMIV")]
     [InlineData(909, "CMIX")]
 
+    // Testes com casas decimais todas preenchidas
+    [InlineData(111, "CXI")]
+    [InlineData(114, "CXIV")]
+    [InlineData(119, "CXIX")]
+    // Testes com valores grandes
+    [InlineData(331, "CCCXXXI")]
+    [InlineData(334, "CCCXXXIV")]
+    [InlineData(339, "CCCXXXIX")]
 
+    [InlineData(441, "CDXLI")]
+    [InlineData(444, "CDXLIV")]
+    [InlineData(449, "CDXLIX")]
+
+    [InlineData(541, "DXLI")]
+    [InlineData(544, "DXLIV")]
+    [InlineData(549, "DXLIX")]
+
+    [InlineData(761, "DCCLXI")]
+    [InlineData(764, "DCCLXIV")]
+    [InlineData(769, "DCCLXIX")]
+
+    [InlineData(981, "CMLXXXI")]
+    [InlineData(984, "CMLXXXIV")]
+    [InlineData(989, "CMLXXXIX")]
+    [InlineData(999, "CMXCIX")]
 
     public void ConvertHundredsRoman(int number, string expected) {
-        NumberToRoman numberToRoman = new NumberToRoman(number);
+        NumberToRoman numberToRoman = new NumberToRoman();
 
         // Verificar se o número é uma centena
         numberToRoman.SortNumber(number);
-        var result = numberToRoman.GetNumberConverted();
+        string result = numberToRoman.GetNumberConverted();
+        Assert.Equal(expected, result);
+    }
+
+    [Theory]
+    [InlineData(1000, "M")]
+    [InlineData(2000, "MM")]
+    [InlineData(3000, "MMM")]
+
+    [InlineData(1001, "MI")]
+    [InlineData(2004, "MMIV")]
+    [InlineData(3009, "MMMIX")]
+
+    [InlineData(1011, "MXI")]
+    [InlineData(1044, "MXLIV")]
+    [InlineData(1099, "MXCIX")]
+
+    [InlineData(2011, "MMXI")]
+    [InlineData(2044, "MMXLIV")]
+    [InlineData(2099, "MMXCIX")]
+
+    [InlineData(3011, "MMMXI")]
+    [InlineData(3044, "MMMXLIV")]
+    [InlineData(3099, "MMMXCIX")]
+
+    [InlineData(1111, "MCXI")]
+    [InlineData(1144, "MCXLIV")]
+    [InlineData(1199, "MCXCIX")]
+
+    [InlineData(2111, "MMCXI")]
+    [InlineData(2144, "MMCXLIV")]
+    [InlineData(2199, "MMCXCIX")]
+
+    [InlineData(3111, "MMMCXI")]
+    [InlineData(3444, "MMMCDXLIV")]
+    [InlineData(3999, "MMMCMXCIX")]
+
+    public void ConvertMilenialsRoman(int number, string expected) {
+        NumberToRoman numberToRoman = new NumberToRoman();
+
+        // Verificar se o número é uma centena
+        numberToRoman.SortNumber(number);
+        string result = numberToRoman.GetNumberConverted();
         Assert.Equal(expected, result);
     }
 }
