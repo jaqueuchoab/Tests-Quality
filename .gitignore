@@ -18,3 +18,18 @@
 /Calculator/CalculatorProj.Tests/obj/*.nuget.*
 /Calculator/CalculatorProj/obj/project.*
 /Calculator/CalculatorProj.Tests/obj/project.*
+
+# Ignorar arquivos de build e cache do projeto principal
+/SalaryCalculator/SalaryCalc/bin/
+/SalaryCalculator/SalaryCalc/obj/
+
+# Ignorar arquivos de build e cache do projeto de testes
+/SalaryCalculator/SalaryCalc.Tests/bin/
+/SalaryCalculator/SalaryCalc.Tests/obj/
+
+# Ignorar arquivos específicos de cache do NuGet (caso deseje ser mais explícita)
+/SalaryCalculator/SalaryCalc/obj/*.nuget.*
+/SalaryCalculator/SalaryCalc.Tests/obj/*.nuget.*
+/SalaryCalculator/SalaryCalc/obj/project.*
+/SalaryCalculator/SalaryCalc.Tests/obj/project.*
+
