@@ -33,3 +33,17 @@
 /SalaryCalculator/SalaryCalc/obj/project.*
 /SalaryCalculator/SalaryCalc.Tests/obj/project.*
 
+# Ignorar arquivos de build e cache do projeto principal
+/ConvertMorseCod/MorseCod/bin/
+/ConvertMorseCod/MorseCod/obj/
+
+# Ignorar arquivos de build e cache do projeto de testes
+/ConvertMorseCod/MorseCod.Tests/bin/
+/ConvertMorseCod/MorseCod.Tests/obj/
+
+# Ignorar arquivos específicos de cache do NuGet (caso deseje ser mais explícita)
+/ConvertMorseCod/MorseCod/obj/*.nuget.*
+/ConvertMorseCod/MorseCod.Tests/obj/*.nuget.*
+/ConvertMorseCod/MorseCod/obj/project.*
+/ConvertMorseCod/MorseCod.Tests/obj/project.*
+
