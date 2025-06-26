@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+namespace MorseCod;
 
 public class ConvertMorseCod {
   private string frase;
@@ -55,7 +56,7 @@ public class ConvertMorseCod {
   };
 
   private string[] SliceFrase() {
-    return frase.ToLower().Split(' ');
+    return this.frase.ToLower().Split(' ');
   }
 
   public string StringToMorse() {
